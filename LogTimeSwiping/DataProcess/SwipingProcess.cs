@@ -13,10 +13,12 @@ namespace LogTimeSwiping.DataProcess
         {
             int intReturn = 0;
 
+
             try
             {
                 string chkEmployee = "SELECT count(EmployeeCode) from Employees " +
                                      "where EmployeeCode = '" + EmployeeID + "' and deleteddate is null";
+
                 var cntEmp = Config.ExecuteIntScalar(chkEmployee);
                 if (Convert.ToInt32(cntEmp) != 0)
                 {
@@ -72,6 +74,7 @@ namespace LogTimeSwiping.DataProcess
 
             return info;
         }
+        
 
     }
 }

@@ -50,6 +50,7 @@
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnChange = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -239,11 +240,23 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "(SWIPE IN)";
             // 
+            // btnChange
+            // 
+            this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.Location = new System.Drawing.Point(619, 140);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(169, 34);
+            this.btnChange.TabIndex = 45;
+            this.btnChange.Text = "Change Swipe";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
             // Swiping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 498);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.label3);
@@ -259,6 +272,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Swiping";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Swiping";
             this.Load += new System.EventHandler(this.Swiping_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -291,5 +305,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TransOut;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnChange;
     }
 }

@@ -40,6 +40,7 @@ namespace LogTimeSwiping
                            "TransIn,time(TimeOut) as TimeOut,TransOut from logtime lt " +
                            "where date(lt.LogDate)= curdate() " +
                            "order by time(lt.TimeIn) desc";
+
             DataTable dtable = Config.RetreiveData(query);
 
             try
@@ -75,7 +76,7 @@ namespace LogTimeSwiping
             if (Convert.ToInt32(e.KeyChar) == 13 && txtID.Text!="")
             {
                 //temporary id
-                txtEmployeeCode.Text = txtID.Text;
+                txtEmployeeCode.Text = EvaluateEmployeeID(txtID.Text);
 
                 int isSuccess = SwipingProcess.UpdateTimeIN(txtEmployeeCode.Text,lblDate.Text,lblTime.Text);
 
@@ -103,6 +104,56 @@ namespace LogTimeSwiping
                 txtID.Text = "";
                 txtID.Focus();
             }
+        } 
+
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private static string EvaluateEmployeeID(string EmployeeID)
+        {
+            string GetCompanyEmployeeID = "";
+            string ValidatedID;
+            char validateEmployeeID;
+
+
+            validateEmployeeID = Convert.ToChar(EmployeeID.Substring(4, 1));
+            try
+            {
+                //HR
+                if (validateEmployeeID == 'R' || validateEmployeeID == '3')
+                {
+                    GetCompanyEmployeeID = EmployeeID.Substring(4, 5);
+                }
+                //PV
+                else if (validateEmployeeID == 'P' || validateEmployeeID == '0')
+                {
+                    GetCompanyEmployeeID = '0' + EmployeeID.Substring(4, 6);
+                }
+                //SCAD
+                else if (validateEmployeeID == 'S' || validateEmployeeID == '1')
+                {
+                    GetCompanyEmployeeID = '1' + EmployeeID.Substring(4, 6);
+                }
+                //HTI
+                else if (validateEmployeeID == 'H' || validateEmployeeID == '2')
+                {
+                    GetCompanyEmployeeID = '2' + EmployeeID.Substring(4, 6);
+                }
+                //WKN
+                else if (validateEmployeeID == 'W' || validateEmployeeID == '4')
+                {
+                    GetCompanyEmployeeID = '4' + EmployeeID.Substring(4, 6);
+                }
+            }
+            finally
+            {
+                ValidatedID = GetCompanyEmployeeID.ToString();
+            }
+            return ValidatedID;
         }
     }
 }
