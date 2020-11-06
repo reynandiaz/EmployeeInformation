@@ -42,9 +42,12 @@ namespace EmployeeInformation
                         "inner join departments d " +
                         "on s.DepartmentID = d.departmentid " +
                         "where e.deleteddate is null ";
-                        if (txtFilter.Text != "")
+                        if (txtFilter.Text != " ")
                         {
-                            QueryAll = QueryAll + "and firstname like '%" + txtFilter.Text + "%' or lastname like '%" + txtFilter.Text + "%'";
+                QueryAll = QueryAll + "and firstname like '%" + txtFilter.Text + "%'  " +
+                                    "or lastname like '%" + txtFilter.Text + "%' " +
+                                    "or departmentname like '%" + txtFilter.Text + "%' " +
+                                    "or sectionname like '%" + txtFilter.Text + "%' ";
                         }
                         QueryAll = QueryAll + " Limit " + intLimit + " offset " + intOffset;
      
@@ -71,7 +74,6 @@ namespace EmployeeInformation
             {
                 MessageBox.Show(exc.ToString());
             }
-
         }
 
         private double getMaxPage(int intLimit)

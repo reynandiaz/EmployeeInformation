@@ -29,16 +29,15 @@ namespace LogTimeSwiping
                 Config.connection.Open();
                 lblConnection.Text = "Connected";
             }
-            catch
+            catch(Exception exc)
             {
+                MessageBox.Show(exc.ToString());
                 lblConnection.Text = "Failed";
             }
             finally
             {
                 Config.connection.Close();
             }
-        
-        
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

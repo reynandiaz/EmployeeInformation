@@ -58,7 +58,7 @@
             this.Info});
             this.dataGridView1.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(791, 359);
+            this.dataGridView1.Size = new System.Drawing.Size(766, 359);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -95,7 +95,7 @@
             // txtFilter
             // 
             this.txtFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilter.Location = new System.Drawing.Point(464, 14);
+            this.txtFilter.Location = new System.Drawing.Point(450, 15);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(210, 22);
             this.txtFilter.TabIndex = 26;
@@ -104,9 +104,9 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(680, 12);
+            this.btnSearch.Location = new System.Drawing.Point(666, 13);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(123, 25);
+            this.btnSearch.Size = new System.Drawing.Size(112, 25);
             this.btnSearch.TabIndex = 30;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             // 
             // btnMinPage
             // 
-            this.btnMinPage.Location = new System.Drawing.Point(12, 14);
+            this.btnMinPage.Location = new System.Drawing.Point(308, 409);
             this.btnMinPage.Name = "btnMinPage";
             this.btnMinPage.Size = new System.Drawing.Size(35, 23);
             this.btnMinPage.TabIndex = 31;
@@ -124,7 +124,7 @@
             // 
             // btnLessPage
             // 
-            this.btnLessPage.Location = new System.Drawing.Point(49, 14);
+            this.btnLessPage.Location = new System.Drawing.Point(345, 409);
             this.btnLessPage.Name = "btnLessPage";
             this.btnLessPage.Size = new System.Drawing.Size(27, 23);
             this.btnLessPage.TabIndex = 32;
@@ -134,7 +134,7 @@
             // 
             // btnAddPage
             // 
-            this.btnAddPage.Location = new System.Drawing.Point(142, 14);
+            this.btnAddPage.Location = new System.Drawing.Point(438, 409);
             this.btnAddPage.Name = "btnAddPage";
             this.btnAddPage.Size = new System.Drawing.Size(27, 23);
             this.btnAddPage.TabIndex = 34;
@@ -144,7 +144,7 @@
             // 
             // btnMaxPage
             // 
-            this.btnMaxPage.Location = new System.Drawing.Point(171, 14);
+            this.btnMaxPage.Location = new System.Drawing.Point(467, 409);
             this.btnMaxPage.Name = "btnMaxPage";
             this.btnMaxPage.Size = new System.Drawing.Size(35, 23);
             this.btnMaxPage.TabIndex = 33;
@@ -154,7 +154,7 @@
             // 
             // txtPage
             // 
-            this.txtPage.Location = new System.Drawing.Point(78, 16);
+            this.txtPage.Location = new System.Drawing.Point(374, 410);
             this.txtPage.Name = "txtPage";
             this.txtPage.Size = new System.Drawing.Size(24, 20);
             this.txtPage.TabIndex = 35;
@@ -162,7 +162,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(12, 408);
+            this.btnPrint.Location = new System.Drawing.Point(12, 411);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(136, 29);
             this.btnPrint.TabIndex = 36;
@@ -173,7 +173,7 @@
             // txtMaxPage
             // 
             this.txtMaxPage.Enabled = false;
-            this.txtMaxPage.Location = new System.Drawing.Point(116, 16);
+            this.txtMaxPage.Location = new System.Drawing.Point(412, 410);
             this.txtMaxPage.Name = "txtMaxPage";
             this.txtMaxPage.Size = new System.Drawing.Size(24, 20);
             this.txtMaxPage.TabIndex = 37;
@@ -182,7 +182,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(103, 17);
+            this.label1.Location = new System.Drawing.Point(399, 411);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(12, 16);
             this.label1.TabIndex = 38;
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 449);
+            this.ClientSize = new System.Drawing.Size(790, 449);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMaxPage);
             this.Controls.Add(this.btnPrint);
@@ -205,6 +205,8 @@
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Employees";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Employees_Load);

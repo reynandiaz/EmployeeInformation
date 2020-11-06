@@ -26,7 +26,7 @@ namespace EmployeeInformation.Reports.EmployeeID
             
 
             dsEmployeeID lstEmployee = GetData();
-            testQR();
+            //testQR();
             //MessageBox.Show(lstEmployee.DataTable1.Rows[0]["EmployeeCode"].ToString());
             //generateQRCode(lstEmployee);
 

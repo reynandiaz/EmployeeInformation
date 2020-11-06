@@ -273,6 +273,8 @@
             this.Controls.Add(this.txtEmployeeCode);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddEmployee";
             this.Text = "AddEmployee";
             this.Load += new System.EventHandler(this.AddEmployee_Load);

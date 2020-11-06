@@ -15,6 +15,8 @@ namespace LogTimeSwiping
     public partial class Swiping : Form
     {
         private int SwipeMode;
+        
+
         //SWIPE MODE =1? "Swipe in":"Swipeout"
         public Swiping()
         {
@@ -39,7 +41,7 @@ namespace LogTimeSwiping
             string query = "select EmployeeCode,convert(LogDate,char(10)) as DateLog,time(TimeIn) as TimeIn, " +
                            "TransIn,time(TimeOut) as TimeOut,TransOut from logtime lt " +
                            "where date(lt.LogDate)= curdate() " +
-                           "order by time(lt.TimeIn) desc";
+                           "order by time(lt.TimeIn) desc limit 15 ";
 
             DataTable dtable = Config.RetreiveData(query);
 
@@ -73,45 +75,78 @@ namespace LogTimeSwiping
 
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Convert.ToInt32(e.KeyChar) == 13 && txtID.Text!="")
+            if (Convert.ToInt32(e.KeyChar) == 13)
             {
-                //temporary id
-                txtEmployeeCode.Text = EvaluateEmployeeID(txtID.Text);
-
-                int isSuccess = SwipingProcess.UpdateTimeIN(txtEmployeeCode.Text,lblDate.Text,lblTime.Text);
-
-                //1 = success/ 2=failed/ 3=already login/ 4=not exist
-
-                if (isSuccess == 2)
+                if (txtID.Text != "" && txtID.Text.Length == 10)
                 {
-                    MessageBox.Show("Failed Swipe!");
+                    int isSuccess =0;
+                    //temporary id
+                    string newEmployeeCode = EvaluateEmployeeID(txtID.Text);
+
+                    if (SwipeMode == 1)
+                    {
+                        isSuccess = SwipingProcess.UpdateTimeIN(newEmployeeCode, lblDate.Text, lblTime.Text);
+                    }
+                    else if (SwipeMode == 2)
+                    { 
+                        isSuccess= SwipingProcess.UpdateTimeOut(newEmployeeCode, lblDate.Text, lblTime.Text);
+                    }
+                    else
+                    { 
+                        MessageBox.Show("3"); 
+                    }
+
+
+                    //1 = success/ 2=failed/ 3=already login/ 4=not exist
+
+                    if (isSuccess == 2)
+                    {
+                        //MessageBox.Show("Failed Swipe!");
+                        MessageForm scanned = new MessageForm();
+                        MessageForm.strMessage = "Failed Swipe!";
+                        scanned.ShowDialog();
+                    }
+                    else if (isSuccess == 3)
+                    {
+                        //MessageBox.Show("Already Login!");
+                        MessageForm scanned = new MessageForm();
+                        MessageForm.strMessage = "Already updated!";
+                        scanned.ShowDialog();
+                    }
+                    else if (isSuccess == 4)
+                    { 
+                        //MessageBox.Show("Invalid employee!");
+                        MessageForm scanned = new MessageForm();
+                        MessageForm.strMessage = "Invalid employee!";
+                        scanned.ShowDialog();
+                    }
+                    else if (isSuccess == 5)
+                    {
+                        //MessageBox.Show("Invalid employee!");
+                        MessageForm scanned = new MessageForm();
+                        MessageForm.strMessage = "Not Logged in!";
+                        scanned.ShowDialog();
+                    }
+                    else if (isSuccess == 1)
+                    {
+                        DataTable info = new DataTable();
+                        info = SwipingProcess.getInformation(newEmployeeCode);
+                        txtEmployeeCode.Text = info.Rows[0]["EmployeeCode"].ToString();
+                        txtName.Text = info.Rows[0]["FirstName"].ToString();
+                        txtDepartment.Text = info.Rows[0]["DepartmentName"].ToString();
+                        txtSection.Text = info.Rows[0]["SectionName"].ToString();
+                    }
+                    RefreshTable();
+                    txtID.Text = "";
+                    txtID.Focus();
                 }
-                else if (isSuccess == 3)
-                {
-                    MessageBox.Show("Already Login!");
+                else
+                { 
+                    txtID.Text = "";
+                    txtID.Focus();
                 }
-                else if (isSuccess == 4)
-                { MessageBox.Show("Invalid employee!"); }
-                else if (isSuccess == 1)
-                {
-                    DataTable info = new DataTable();
-                    info = SwipingProcess.getInformation(txtEmployeeCode.Text);
-                    txtName.Text = info.Rows[0]["FirstName"].ToString();
-                    txtDepartment.Text = info.Rows[0]["DepartmentName"].ToString();
-                    txtSection.Text = info.Rows[0]["SectionName"].ToString();
-                }
-                RefreshTable();
-                txtID.Text = "";
-                txtID.Focus();
             }
         } 
-
-
-        private void btnChange_Click(object sender, EventArgs e)
-        {
-            
-        }
-
 
         private static string EvaluateEmployeeID(string EmployeeID)
         {
@@ -154,6 +189,24 @@ namespace LogTimeSwiping
                 ValidatedID = GetCompanyEmployeeID.ToString();
             }
             return ValidatedID;
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            if (SwipeMode == 1)
+            {
+                SwipeMode = 2;
+              
+                lblStatus.Text = "(SWIPE OUT)";
+                lblStatus.Left = lblStatus.Left - 25;
+            }
+            else
+            {
+                SwipeMode = 1;
+                lblStatus.Text = "(SWIPE IN)";
+                lblStatus.Left = lblStatus.Left + 25;
+            }
+            txtID.Focus();
         }
     }
 }

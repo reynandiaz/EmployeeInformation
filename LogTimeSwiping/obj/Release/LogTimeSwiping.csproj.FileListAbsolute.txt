@@ -1,0 +1,14 @@
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.csprojAssemblyReference.cache
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.Login.resources
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.MessageForm.resources
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.Properties.Resources.resources
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.Swiping.resources
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.csproj.GenerateResource.cache
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.csproj.CoreCompileInputs.cache
+D:\Projects\EmployeeInformation\LogTimeSwiping\bin\Release\LogTimeSwiping.exe.config
+D:\Projects\EmployeeInformation\LogTimeSwiping\bin\Release\LogTimeSwiping.exe
+D:\Projects\EmployeeInformation\LogTimeSwiping\bin\Release\LogTimeSwiping.pdb
+D:\Projects\EmployeeInformation\LogTimeSwiping\bin\Release\MySql.Data.xml
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.csproj.CopyComplete
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.exe
+D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Release\LogTimeSwiping.pdb

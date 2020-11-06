@@ -49,7 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.lblDate = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.btnChange = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +65,7 @@
             this.TransIn,
             this.TimeOUT,
             this.TransOut});
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(12, 195);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 291);
@@ -102,11 +103,13 @@
             // 
             // txtID
             // 
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(12, 10);
             this.txtID.Name = "txtID";
             this.txtID.PasswordChar = '*';
-            this.txtID.Size = new System.Drawing.Size(163, 20);
+            this.txtID.Size = new System.Drawing.Size(163, 24);
             this.txtID.TabIndex = 1;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // pictureBox1
@@ -151,7 +154,7 @@
             this.txtName.Location = new System.Drawing.Point(307, 116);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(164, 22);
+            this.txtName.Size = new System.Drawing.Size(173, 22);
             this.txtName.TabIndex = 37;
             // 
             // label1
@@ -173,7 +176,7 @@
             this.txtEmployeeCode.Location = new System.Drawing.Point(307, 92);
             this.txtEmployeeCode.Name = "txtEmployeeCode";
             this.txtEmployeeCode.ReadOnly = true;
-            this.txtEmployeeCode.Size = new System.Drawing.Size(164, 22);
+            this.txtEmployeeCode.Size = new System.Drawing.Size(173, 22);
             this.txtEmployeeCode.TabIndex = 35;
             // 
             // label3
@@ -195,7 +198,7 @@
             this.txtSection.Location = new System.Drawing.Point(307, 164);
             this.txtSection.Name = "txtSection";
             this.txtSection.ReadOnly = true;
-            this.txtSection.Size = new System.Drawing.Size(164, 22);
+            this.txtSection.Size = new System.Drawing.Size(173, 22);
             this.txtSection.TabIndex = 41;
             // 
             // label4
@@ -217,7 +220,7 @@
             this.txtDepartment.Location = new System.Drawing.Point(307, 140);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.ReadOnly = true;
-            this.txtDepartment.Size = new System.Drawing.Size(164, 22);
+            this.txtDepartment.Size = new System.Drawing.Size(173, 22);
             this.txtDepartment.TabIndex = 39;
             // 
             // lblDate
@@ -230,15 +233,15 @@
             this.lblDate.TabIndex = 43;
             this.lblDate.Text = "2020/01/01";
             // 
-            // label5
+            // lblStatus
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(624, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 33);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "(SWIPE IN)";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(624, 97);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(164, 33);
+            this.lblStatus.TabIndex = 44;
+            this.lblStatus.Text = "(SWIPE IN)";
             // 
             // btnChange
             // 
@@ -257,7 +260,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 498);
             this.Controls.Add(this.btnChange);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSection);
@@ -271,8 +274,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Swiping";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Swiping";
             this.Load += new System.EventHandler(this.Swiping_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -304,7 +310,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeOUT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TransOut;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnChange;
     }
 }
