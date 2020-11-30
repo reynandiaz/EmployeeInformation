@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtSection = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btbPaySlip = new System.Windows.Forms.Button();
+            this.btnViewLog = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -292,11 +294,33 @@
             this.label9.Text = "MODE:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btbPaySlip
+            // 
+            this.btbPaySlip.Location = new System.Drawing.Point(148, 430);
+            this.btbPaySlip.Name = "btbPaySlip";
+            this.btbPaySlip.Size = new System.Drawing.Size(129, 34);
+            this.btbPaySlip.TabIndex = 50;
+            this.btbPaySlip.Text = "PRINT PAYSLIP";
+            this.btbPaySlip.UseVisualStyleBackColor = true;
+            this.btbPaySlip.Click += new System.EventHandler(this.btbPaySlip_Click);
+            // 
+            // btnViewLog
+            // 
+            this.btnViewLog.Location = new System.Drawing.Point(13, 430);
+            this.btnViewLog.Name = "btnViewLog";
+            this.btnViewLog.Size = new System.Drawing.Size(129, 34);
+            this.btnViewLog.TabIndex = 51;
+            this.btnViewLog.Text = "VIEW TIMELOG";
+            this.btnViewLog.UseVisualStyleBackColor = true;
+            this.btnViewLog.Click += new System.EventHandler(this.btnViewLog_Click);
+            // 
             // Informations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 436);
+            this.ClientSize = new System.Drawing.Size(476, 476);
+            this.Controls.Add(this.btnViewLog);
+            this.Controls.Add(this.btbPaySlip);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSection);
@@ -353,5 +377,7 @@
         private System.Windows.Forms.Label label8;
         internal System.Windows.Forms.TextBox txtSection;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btbPaySlip;
+        private System.Windows.Forms.Button btnViewLog;
     }
 }

@@ -82,6 +82,18 @@
     <Compile Include="DataProcess\Config.cs" />
     <Compile Include="DataProcess\InformationProcess.cs" />
     <Compile Include="DataProcess\LoginProcess.cs" />
+    <Compile Include="LogInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInformation.Designer.cs">
+      <DependentUpon>LogInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logtime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logtime.Designer.cs">
+      <DependentUpon>Logtime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\EmployeeID\dsEmployeeID.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInformation.resx">
+      <DependentUpon>LogInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logtime.resx">
+      <DependentUpon>Logtime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

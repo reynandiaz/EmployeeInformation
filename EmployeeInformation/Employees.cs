@@ -49,7 +49,7 @@ namespace EmployeeInformation
                                     "or departmentname like '%" + txtFilter.Text + "%' " +
                                     "or sectionname like '%" + txtFilter.Text + "%' ";
                         }
-                        QueryAll = QueryAll + " Limit " + intLimit + " offset " + intOffset;
+            QueryAll = QueryAll + " order by EmployeeCode asc Limit " + intLimit + " offset " + intOffset;
      
                       
             DataTable employeelist = Config.RetreiveData(QueryAll);

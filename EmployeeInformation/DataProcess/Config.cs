@@ -10,7 +10,8 @@ namespace EmployeeInformation.DataProcess
 {
     public class Config
     {
-        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=employee_db;Uid=root;password=admin;SslMode=none;");
+        //public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=employee_db;Uid=root;password=admin;SslMode=none;");
+        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=employee_db;Uid=root;password=;SslMode=none;");
 
         public static DataTable UserInfo;
 
@@ -62,6 +63,18 @@ namespace EmployeeInformation.DataProcess
             }
         
         
+        }
+        public static string GetDate(DateTime prDate)
+        { 
+            string rtnDate = "" ;
+
+            string dYear = prDate.Year.ToString();
+            string dMonth = prDate.Month.ToString();
+            string dDay = prDate.Day.ToString();
+
+            rtnDate = dYear + "-" + dMonth + "-" + dDay;
+
+            return rtnDate;
         }
 
     }

@@ -158,5 +158,16 @@ namespace EmployeeInformation
             catch(Exception exc)
             { MessageBox.Show(exc.ToString()); }
         }
+
+        private void btbPaySlip_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Under Construction");
+        }
+
+        private void btnViewLog_Click(object sender, EventArgs e)
+        {
+            Form log = new LogInformation();
+            log.ShowDialog();
+        }
     }
 }

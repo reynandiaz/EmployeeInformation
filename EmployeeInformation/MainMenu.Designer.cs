@@ -34,6 +34,7 @@
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.logtimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addEmployeeToolStripMenuItem,
-            this.eToolStripMenuItem});
+            this.eToolStripMenuItem,
+            this.logtimeToolStripMenuItem});
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
@@ -63,7 +65,7 @@
             // 
             this.addEmployeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addEmployeeToolStripMenuItem.Image")));
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
@@ -71,7 +73,7 @@
             // 
             this.eToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eToolStripMenuItem.Image")));
             this.eToolStripMenuItem.Name = "eToolStripMenuItem";
-            this.eToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.eToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eToolStripMenuItem.Text = "Employees";
             this.eToolStripMenuItem.Click += new System.EventHandler(this.eToolStripMenuItem_Click);
             // 
@@ -82,6 +84,14 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem2.Text = "Logout";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // logtimeToolStripMenuItem
+            // 
+            this.logtimeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logtimeToolStripMenuItem.Image")));
+            this.logtimeToolStripMenuItem.Name = "logtimeToolStripMenuItem";
+            this.logtimeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logtimeToolStripMenuItem.Text = "Logtime";
+            this.logtimeToolStripMenuItem.Click += new System.EventHandler(this.logtimeToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -112,5 +122,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logtimeToolStripMenuItem;
     }
 }

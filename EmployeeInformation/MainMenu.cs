@@ -49,5 +49,13 @@ namespace EmployeeInformation
             add.MdiParent = this;
             add.Show();
         }
+
+        private void logtimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form log = new Logtime();
+            this.IsMdiContainer = true;
+            log.MdiParent = this;
+            log.Show();
+        }
     }
 }

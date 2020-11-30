@@ -21,6 +21,7 @@ namespace EmployeeInformation
         private void AddEmployee_Load(object sender, EventArgs e)
         {
             txtEmployeeCode.Text = GenerateEmployeeID();
+            dtBirth.Value = DateTime.Now;
             GenerateGender();
             GenerateDepartments();
         }
@@ -107,7 +108,7 @@ namespace EmployeeInformation
                             "'"+ txtMiddle.Text + "'," +
                             "'"+ txtLast.Text + "'," +
                             "'"+ cmbGender.Text + "'," +
-                            "'"+ dtBirth.Value.ToString() + "'," +
+                            "'"+ Config.GetDate(dtBirth.Value) + "'," +
                             "'" + txtAddress.Text + "'," +
                             "(Select DepartmentID from Departments where DepartmentName = '"+ cmbDepartments.Text + "')," +
                             "(Select SectionID from sections s " +
@@ -118,7 +119,6 @@ namespace EmployeeInformation
                             "now()," +
                             "'"+ Config.UserInfo.Rows[0]["EmployeeCode"].ToString() + "'" +
                             ") ";
-
             Config.ExecuteCmd(query);
         }
     }
