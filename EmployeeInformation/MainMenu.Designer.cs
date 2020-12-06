@@ -33,8 +33,11 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.logtimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +46,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
+            this.settingsToolStripMenuItem,
             this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -77,6 +81,14 @@
             this.eToolStripMenuItem.Text = "Employees";
             this.eToolStripMenuItem.Click += new System.EventHandler(this.eToolStripMenuItem_Click);
             // 
+            // logtimeToolStripMenuItem
+            // 
+            this.logtimeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logtimeToolStripMenuItem.Image")));
+            this.logtimeToolStripMenuItem.Name = "logtimeToolStripMenuItem";
+            this.logtimeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logtimeToolStripMenuItem.Text = "Logtime";
+            this.logtimeToolStripMenuItem.Click += new System.EventHandler(this.logtimeToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
@@ -85,13 +97,27 @@
             this.toolStripMenuItem2.Text = "Logout";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // logtimeToolStripMenuItem
+            // settingsToolStripMenuItem
             // 
-            this.logtimeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logtimeToolStripMenuItem.Image")));
-            this.logtimeToolStripMenuItem.Name = "logtimeToolStripMenuItem";
-            this.logtimeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logtimeToolStripMenuItem.Text = "Logtime";
-            this.logtimeToolStripMenuItem.Click += new System.EventHandler(this.logtimeToolStripMenuItem_Click);
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.departmentsToolStripMenuItem,
+            this.sectionsToolStripMenuItem});
+            this.settingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("settingsToolStripMenuItem.Image")));
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // departmentsToolStripMenuItem
+            // 
+            this.departmentsToolStripMenuItem.Name = "departmentsToolStripMenuItem";
+            this.departmentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.departmentsToolStripMenuItem.Text = "Departments";
+            // 
+            // sectionsToolStripMenuItem
+            // 
+            this.sectionsToolStripMenuItem.Name = "sectionsToolStripMenuItem";
+            this.sectionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sectionsToolStripMenuItem.Text = "Sections";
             // 
             // MainMenu
             // 
@@ -123,5 +149,8 @@
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logtimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departmentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sectionsToolStripMenuItem;
     }
 }
