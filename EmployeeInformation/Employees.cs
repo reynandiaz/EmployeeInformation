@@ -29,7 +29,6 @@ namespace EmployeeInformation
         }
         private void RefreshTable()
         {
-            
             double MaxPage = getMaxPage(intLimit);
             txtMaxPage.Text = MaxPage.ToString();
 
@@ -50,8 +49,7 @@ namespace EmployeeInformation
                                     "or sectionname like '%" + txtFilter.Text + "%' ";
                         }
             QueryAll = QueryAll + " order by EmployeeCode asc Limit " + intLimit + " offset " + intOffset;
-     
-                      
+        
             DataTable employeelist = Config.RetreiveData(QueryAll);
 
             try
@@ -83,7 +81,7 @@ namespace EmployeeInformation
             string query = "SELECT count(employeeCode) as cnt from employees";
 
             double cnt = Config.ExecuteIntScalar(query) / Convert.ToDouble(intLimit);
-
+ 
             pageCount = Math.Ceiling(cnt);
 
             return pageCount;

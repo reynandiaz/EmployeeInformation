@@ -26,3 +26,17 @@ D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.csproj.C
 D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.exe
 D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.pdb
 D:\Projects\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.MessageForm.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\bin\Debug\LogTimeSwiping.exe.config
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\bin\Debug\LogTimeSwiping.exe
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\bin\Debug\LogTimeSwiping.pdb
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\bin\Debug\MySql.Data.xml
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.csprojAssemblyReference.cache
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.Login.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.MessageForm.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.Properties.Resources.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.Swiping.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.csproj.GenerateResource.cache
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.csproj.CoreCompileInputs.cache
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.csproj.CopyComplete
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.exe
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\LogTimeSwiping\obj\Debug\LogTimeSwiping.pdb

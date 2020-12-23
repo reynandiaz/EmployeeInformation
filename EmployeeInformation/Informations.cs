@@ -113,29 +113,20 @@ namespace EmployeeInformation
             if (dialogResult == DialogResult.Yes)
             {
                 string query = "Update employees set " +
-                    "Firstname=':1', " +
-                    "lastname=':2'," +
-                    "middlename=':3'," +
-                    "address=':4' " +
-                    " where employeecode=':5'";
-                StringBuilder data = new StringBuilder(query);
-                data.Replace(":1", txtFirstname.Text);
-                data.Replace(":2", txtLastname.Text);
-                data.Replace(":3", txtMiddle.Text);
-                data.Replace(":4", txtAddress.Text);
-                data.Replace(":5", txtEmployeeCode.Text);
-
+                    "Firstname='" + txtFirstname.Text + "', " +
+                    "lastname='" + txtLastname.Text + "'," +
+                    "middlename='"+ txtMiddle.Text + "'," +
+                    "address='" + txtAddress.Text + "' " +
+                    " where employeecode='"+ txtEmployeeCode.Text + "'";
                 try
                 {
-                    Config.ExecuteCmd(data.ToString());
+                    Config.ExecuteCmd(query);
                     MessageBox.Show("Records Updated!");
                 }
                 catch (Exception exc)
                 { MessageBox.Show(exc.ToString()); }
                 finally
                 { this.Close(); }
-
-
             }
         }
 

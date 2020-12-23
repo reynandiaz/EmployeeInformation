@@ -24,7 +24,6 @@ namespace EmployeeInformation
             if (dialogResult == DialogResult.Yes)
             {
                 Config.UserInfo = null; 
-
                 foreach (Form frm in this.MdiChildren)
                 {
                     frm.Dispose();
@@ -56,6 +55,14 @@ namespace EmployeeInformation
             this.IsMdiContainer = true;
             log.MdiParent = this;
             log.Show();
+        }
+
+        private void departmentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form dept = new Departments();
+            this.IsMdiContainer = true;
+            dept.MdiParent = this;
+            dept.Show();
         }
     }
 }

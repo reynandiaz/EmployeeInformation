@@ -4,43 +4,11 @@
     <ReportItems>
       <Rectangle Name="Rectangle3">
         <ReportItems>
-          <Textbox Name="EmployeeCode">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!EmployeeCode.Value, "DataSet1")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>EmployeeCode</rd:DefaultName>
-            <Top>5.49174cm</Top>
-            <Left>0.60854cm</Left>
-            <Height>0.6cm</Height>
-            <Width>3.10444cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Line Name="Line2">
             <Top>6.82375cm</Top>
             <Left>0.60854cm</Left>
             <Height>0cm</Height>
             <Width>5.72792cm</Width>
-            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -68,7 +36,7 @@
             <Left>0.60854cm</Left>
             <Height>0.6cm</Height>
             <Width>5.72792cm</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -90,7 +58,9 @@
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>EmployeeName</rd:DefaultName>
@@ -98,7 +68,7 @@
             <Left>0.60854cm</Left>
             <Height>0.6cm</Height>
             <Width>5.72792cm</Width>
-            <ZIndex>3</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -114,7 +84,7 @@
             <Left>0.5827cm</Left>
             <Height>0cm</Height>
             <Width>2.68356cm</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -144,7 +114,7 @@
             <Left>0.5827cm</Left>
             <Height>0.6cm</Height>
             <Width>2.68356cm</Width>
-            <ZIndex>5</ZIndex>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -168,14 +138,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <Top>7.77653cm</Top>
             <Left>0.57624cm</Left>
             <Height>0.6cm</Height>
             <Width>2.68356cm</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -191,7 +163,7 @@
             <Left>3.65936cm</Left>
             <Height>0cm</Height>
             <Width>2.67064cm</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -234,7 +206,7 @@
             <Left>3.65936cm</Left>
             <Height>0.6cm</Height>
             <Width>2.67064cm</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -258,14 +230,16 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <Top>7.77653cm</Top>
             <Left>3.6529cm</Left>
             <Height>0.6cm</Height>
             <Width>2.67064cm</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -280,7 +254,7 @@
         <KeepTogether>true</KeepTogether>
         <Top>0.12912cm</Top>
         <Left>0.0323cm</Left>
-        <Height>3.67296in</Height>
+        <Height>3.77713in</Height>
         <Width>2.63in</Width>
         <Style>
           <Border>
@@ -291,8 +265,8 @@
       <Rectangle Name="Rectangle4">
         <ReportItems>
           <Line Name="Line3">
-            <Top>8.55292cm</Top>
-            <Left>0.60208cm</Left>
+            <Top>8.55293cm</Top>
+            <Left>0.60854cm</Left>
             <Height>0cm</Height>
             <Width>5.72792cm</Width>
             <Style>
@@ -318,8 +292,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>8.72931cm</Top>
-            <Left>0.60208cm</Left>
+            <Top>8.72932cm</Top>
+            <Left>0.60854cm</Left>
             <Height>0.6cm</Height>
             <Width>5.72792cm</Width>
             <ZIndex>1</ZIndex>
@@ -352,7 +326,7 @@
             <rd:DefaultName>Textbox10</rd:DefaultName>
             <Top>0.42333cm</Top>
             <Left>0.60854cm</Left>
-            <Height>4.38737cm</Height>
+            <Height>2.61466cm</Height>
             <Width>5.72792cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
@@ -365,11 +339,43 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="txtBarcode">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Barcode.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontFamily>code39</FontFamily>
+                      <FontSize>16pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.23875cm</Top>
+            <Left>0.60854cm</Left>
+            <Height>1.585cm</Height>
+            <Width>5.72792cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border />
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>0.12912cm</Top>
         <Left>6.84911cm</Left>
-        <Height>3.9in</Height>
+        <Height>3.88in</Height>
         <Width>2.63in</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -426,10 +432,14 @@
           <DataField>Section</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Barcode">
+          <DataField>Barcode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsEmployeeID</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\smd239\Desktop\SYSTEMS\C#Projects\Windows Applications\EmployeeInformation\EmployeeInformation\Reports\EmployeeID\dsEmployeeID.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\Reports\EmployeeID\dsEmployeeID.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

@@ -157,7 +157,6 @@ C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debu
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\QRCoder.dll
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\EnvDTE.dll
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
@@ -223,3 +222,14 @@ C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debu
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.csproj.CopyComplete
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.exe
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.pdb
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\RdlCompile.cache
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\RdlCompile.compiled
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.Departments.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\QRCoder.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\BarcodeStandard.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\System.Drawing.Common.dll
