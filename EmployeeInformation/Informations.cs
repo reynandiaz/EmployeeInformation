@@ -140,7 +140,7 @@ namespace EmployeeInformation
 
             try
             {
-                Reports.EmployeeID.frmEmployeeID.EmployeeCode = txtEmployeeCode.Text;
+                Reports.EmployeeID.frmEmployeeID.EmployeeID = txtEmployeeCode.Text;
                 Reports.EmployeeID.frmEmployeeID id = new Reports.EmployeeID.frmEmployeeID();
                 //Form menu = new MainMenu();
                 //id.MdiParent = menu;

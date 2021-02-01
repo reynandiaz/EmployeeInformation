@@ -109,19 +109,14 @@
     <Compile Include="Logtime.Designer.cs">
       <DependentUpon>Logtime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\EmployeeID\dsEmployeeID.cs">
-      <DependentUpon>dsEmployeeID.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\EmployeeID\dsEmployeeID.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsEmployeeID.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reports\EmployeeID\frmEmployeeID.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\EmployeeID\frmEmployeeID.Designer.cs">
       <DependentUpon>frmEmployeeID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EmployeeList\dsEmployeeList.cs">
+      <DependentUpon>dsEmployeeList.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\EmployeeList\dsEmployeeList.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -203,17 +198,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\EmployeeList\rptEmployeeList.rdlc" />
     <None Include="packages.config" />
-    <None Include="Reports\EmployeeID\dsEmployeeID.xsc">
-      <DependentUpon>dsEmployeeID.xsd</DependentUpon>
-    </None>
-    <None Include="Reports\EmployeeID\dsEmployeeID.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsEmployeeID.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Reports\EmployeeID\dsEmployeeID.xss">
-      <DependentUpon>dsEmployeeID.xsd</DependentUpon>
-    </None>
     <None Include="Reports\EmployeeList\dsEmployeeList.xsc">
       <DependentUpon>dsEmployeeList.xsd</DependentUpon>
     </None>

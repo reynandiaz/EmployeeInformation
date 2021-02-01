@@ -356,7 +356,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Left>0.58208cm</Left>
         <Height>1.2cm</Height>
-        <Width>19.07521cm</Width>
+        <Width>19.0752cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -460,7 +460,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsEmployeeList</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\smd239\Desktop\SYSTEMS\C#Projects\Windows Applications\EmployeeInformation\EmployeeInformation\Reports\EmployeeList\dsEmployeeList.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\Reports\EmployeeList\dsEmployeeList.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

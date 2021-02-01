@@ -1,22 +1,20 @@
-﻿using EmployeeInformation.DataProcess;
-using EmployeeInformation.Reports.EmployeeID;
-using Microsoft.Reporting.WinForms;
-using MySql.Data.MySqlClient;
-using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Windows.Forms;
-using QRCoder;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
-
-
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+using EmployeeInformation.DataProcess;
 
 namespace EmployeeInformation.Reports.EmployeeID
 {
     public partial class frmEmployeeID : Form
     {
-        public static string EmployeeCode;
+        public static string EmployeeID;
         public frmEmployeeID()
         {
             InitializeComponent();
@@ -24,57 +22,35 @@ namespace EmployeeInformation.Reports.EmployeeID
 
         private void frmEmployeeID_Load(object sender, EventArgs e)
         {
+            DataTable data = getData();
 
-
-            dsEmployeeID lstEmployee = GetData();
-
-
-            string strQRId = "A1R" + lstEmployee.DataTable1.Rows[0]["EmployeeCode"].ToString().PadLeft(6, '0') + "Z";
-            lstEmployee.DataTable1.Rows[0]["Barcode"] = strQRId;
-            //GenerateBarcodes(strQRId);
-
-            ReportDataSource datasource = new ReportDataSource("DataSet1", lstEmployee.Tables[0]);
-            this.reportViewer1.LocalReport.DataSources.Clear();
-            this.reportViewer1.LocalReport.DataSources.Add(datasource);
+            ReportParameterCollection reportParams = new ReportParameterCollection();
+            reportParams.Add(new ReportParameter("prEmployeeName", data.Rows[0]["EmployeeName"].ToString()));
+            reportParams.Add(new ReportParameter("prDepartment", data.Rows[0]["DepartmentName"].ToString()));
+            reportParams.Add(new ReportParameter("prSection", data.Rows[0]["SectionName"].ToString()));
+            reportParams.Add(new ReportParameter("prEmployeeID", data.Rows[0]["EmployeeCode"].ToString()));
+            this.reportViewer1.LocalReport.SetParameters(reportParams);
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.RefreshReport();
-
         }
-        private void GenerateBarcodes(string qrValue)
+
+        private static DataTable getData()
         {
-            Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
-            pictureBox1.Image = qrcode.Draw(qrValue, 20);
-            pictureBox2.Image = qrcode.Draw(qrValue, 20);
+            DataTable rtnValue = new DataTable();
+
+            string query = "SELECT e.EmployeeCode,concat(e.Lastname, ', ', e.Firstname,' ',e.Middlename) AS EmployeeName , " +
+                            "d.DepartmentName , s.SectionName " +
+                            "FROM employees e " +
+                            "LEFT JOIN departments d " +
+                            "ON d.DepartmentID = e.DepartmentID " +
+                            "LEFT JOIN sections s " +
+                            "ON s.DepartmentID = d.DepartmentID " +
+                            "AND s.SectionID = e.SectionID " +
+                            "WHERE e.EmployeeCode = '"+ EmployeeID +"' ";
+
+            rtnValue = Config.RetreiveData(query);
+
+            return rtnValue;
         }
-
-
-        private dsEmployeeID GetData()
-        {
-            string query = " SELECT EmployeeCode,concat(lastname,', ',firstname, ' ',Middlename )as EmployeeName " +
-                 ",d.DepartmentName as Department " +
-                 ",s.SectionName as Section " +
-                 "from employees e " +
-                 "inner join sections s " +
-                 "on s.SectionID = e.SectionID " +
-                 "and s.DepartmentID = e.DepartmentID " +
-                 "inner join departments d " +
-                 "on d.DepartmentID = s.DepartmentID where e.deleteddate is null and EmployeeCode = '" + EmployeeCode + "'";
-
-            var command = new MySqlCommand(query, Config.connection);
-
-            try
-            {
-                Config.connection.Open();
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                dsEmployeeID ds = new dsEmployeeID();
-                da.Fill(ds, "DataTable1");
-                return ds;
-            }
-            finally
-            {
-                Config.connection.Close();
-            }
-        }
-
     }
 }

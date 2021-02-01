@@ -10,7 +10,10 @@ namespace EmployeeInformation.DataProcess
 {
     public class Config
     {
+        //TESTING
         public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=employee_db;Uid=root;password=admin;SslMode=none;");
+
+        //DEPLOY
         //public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=employee_db;Uid=root;password=;SslMode=none;");
 
         public static DataTable UserInfo;
