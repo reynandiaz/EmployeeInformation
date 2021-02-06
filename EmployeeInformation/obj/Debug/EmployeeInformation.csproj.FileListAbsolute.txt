@@ -233,3 +233,7 @@ C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debu
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\QRCoder.dll
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\BarcodeStandard.dll
 C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\bin\Debug\System.Drawing.Common.dll
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.Reports.EmployeeData.frmEmployeeData.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.Sections.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.MonthSelection.resources
+C:\Users\diazr\Documents\GitHub\EmployeeInformation\EmployeeInformation\obj\Debug\EmployeeInformation.Reports.PaySlip.frmPaySlip.resources

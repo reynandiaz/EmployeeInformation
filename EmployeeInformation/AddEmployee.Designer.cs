@@ -273,11 +273,14 @@
             this.Controls.Add(this.txtEmployeeCode);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddEmployee";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddEmployee_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

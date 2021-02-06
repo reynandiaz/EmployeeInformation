@@ -13,6 +13,12 @@ namespace EmployeeInformation
 {
     public partial class MainMenu : Form
     {
+        private Employees employees = new Employees();
+        private AddEmployee addemployee = new AddEmployee();
+        private Departments dept = new Departments();
+        private Sections sect = new Sections();
+
+
         public MainMenu()
         {
             InitializeComponent();
@@ -35,18 +41,18 @@ namespace EmployeeInformation
 
         private void eToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form employees = new Employees();
-            this.IsMdiContainer = true;
+            employees.Dispose();
+            employees = new Employees();
             employees.MdiParent = this;
             employees.Show();
         }
 
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form add = new AddEmployee();
-            this.IsMdiContainer = true;
-            add.MdiParent = this;
-            add.Show();
+            addemployee.Dispose();
+            addemployee = new AddEmployee();
+            addemployee.MdiParent = this;
+            addemployee.Show();
         }
 
         private void logtimeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,10 +65,18 @@ namespace EmployeeInformation
 
         private void departmentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form dept = new Departments();
-            this.IsMdiContainer = true;
+            dept.Dispose();
+            dept = new Departments();
             dept.MdiParent = this;
             dept.Show();
+        }
+
+        private void sectionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sect.Dispose();
+            sect = new Sections();
+            sect.MdiParent = this;
+            sect.Show();
         }
     }
 }

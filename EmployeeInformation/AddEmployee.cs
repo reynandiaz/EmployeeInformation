@@ -120,6 +120,19 @@ namespace EmployeeInformation
                             "'"+ Config.UserInfo.Rows[0]["EmployeeCode"].ToString() + "'" +
                             ") ";
             Config.ExecuteCmd(query);
+
+            string ratequery = "INSERT INTO employeerate (EmployeeCode, Rate, CreatedDate,  UpdatedDate, UpdatedBy) " +
+                               "VALUES('" + txtEmployeeCode.Text + "', 0.0, now(), now(), '" + Config.UserInfo.Rows[0]["EmployeeCode"].ToString() + "') ";
+
+            Config.ExecuteCmd(ratequery);
+        }
+
+        private void AddEmployee_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Dispose();
+            }
         }
     }
 }

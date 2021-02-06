@@ -91,6 +91,8 @@
     <Compile Include="DataProcess\Config.cs" />
     <Compile Include="DataProcess\InformationProcess.cs" />
     <Compile Include="DataProcess\LoginProcess.cs" />
+    <Compile Include="DataProcess\ReportsData.cs" />
+    <Compile Include="DataProcess\SettingsProcess.cs" />
     <Compile Include="Departments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +110,18 @@
     </Compile>
     <Compile Include="Logtime.Designer.cs">
       <DependentUpon>Logtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthSelection.Designer.cs">
+      <DependentUpon>MonthSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EmployeeData\frmEmployeeData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeData\frmEmployeeData.Designer.cs">
+      <DependentUpon>frmEmployeeData.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\EmployeeID\frmEmployeeID.cs">
       <SubType>Form</SubType>
@@ -155,6 +169,18 @@
     <Compile Include="Reports\EmployeeList\frmEmployeeListReport.Designer.cs">
       <DependentUpon>frmEmployeeListReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PaySlip\frmPaySlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PaySlip\frmPaySlip.Designer.cs">
+      <DependentUpon>frmPaySlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections.Designer.cs">
+      <DependentUpon>Sections.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
@@ -180,6 +206,9 @@
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MonthSelection.resx">
+      <DependentUpon>MonthSelection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -189,6 +218,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\EmployeeData\frmEmployeeData.resx">
+      <DependentUpon>frmEmployeeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeData\rptEmployeeData.rdlc" />
     <EmbeddedResource Include="Reports\EmployeeID\frmEmployeeID.resx">
       <DependentUpon>frmEmployeeID.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +230,13 @@
       <DependentUpon>frmEmployeeListReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\EmployeeList\rptEmployeeList.rdlc" />
+    <EmbeddedResource Include="Reports\PaySlip\frmPaySlip.resx">
+      <DependentUpon>frmPaySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaySlip\rptPaySlip.rdlc" />
+    <EmbeddedResource Include="Sections.resx">
+      <DependentUpon>Sections.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Reports\EmployeeList\dsEmployeeList.xsc">
       <DependentUpon>dsEmployeeList.xsd</DependentUpon>

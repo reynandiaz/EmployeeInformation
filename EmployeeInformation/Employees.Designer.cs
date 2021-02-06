@@ -205,11 +205,14 @@
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Employees";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Employees_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Employees_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

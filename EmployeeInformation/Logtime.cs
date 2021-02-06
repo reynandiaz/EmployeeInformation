@@ -26,9 +26,12 @@ namespace EmployeeInformation
         }
         private void RefreshTable()
         {
-            string query = "Select left(logdate,10) as Logdate,EmployeeCode,right(timein,8) as Timein," +
-                "right(timeout,8) as Timeout from logtime " +
-                "where left(logdate, 10) = left('"+ Config.GetDate(dtPicker.Value) + "', 10)";
+            //string query = "Select left(logdate,10) as Logdate,EmployeeCode,right(timein,8) as Timein," +
+            //    "right(timeout,8) as Timeout from logtime " +
+            //    "where left(logdate, 10) = left('"+ Config.GetDate(dtPicker.Value) + "', 10)";
+
+            string query = "SELECT DATE_FORMAT(LogDate, '%Y-%m-%d') AS LogDate, EmployeeCode,DATE_FORMAT(StartTime, '%T') AS TimeIN, DATE_FORMAT(EndTime, '%T') AS TimeOut FROM logtime lt " +
+                            "WHERE DATE_FORMAT(LogDate, '%Y-%m-%d') = left('" + dtPicker.Value.ToString("yyyy-MM-dd") + "', 10)";
             DataTable dtable = Config.RetreiveData(query);
             try
             {

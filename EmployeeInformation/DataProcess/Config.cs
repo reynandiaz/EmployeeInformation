@@ -57,7 +57,7 @@ namespace EmployeeInformation.DataProcess
             {
                 connection.Open();
                 var cnt = command.ExecuteScalar();
-                intReturn = Convert.ToInt32(cnt);
+                intReturn = (cnt.ToString()==""?0:Convert.ToInt32(cnt));
                 return intReturn;
             }
             finally

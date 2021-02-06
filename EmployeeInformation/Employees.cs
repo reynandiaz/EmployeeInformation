@@ -154,5 +154,13 @@ namespace EmployeeInformation
             txtPage.Text = "1";
             RefreshTable();
         }
+
+        private void Employees_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Dispose();
+            }
+        }
     }
 }

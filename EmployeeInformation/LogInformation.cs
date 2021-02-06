@@ -13,9 +13,9 @@ namespace EmployeeInformation
 {
     public partial class LogInformation : Form
     {
-
-        private DateTime curDate ;
-
+        DataTable monthsdata = new DataTable();
+        public static string EmployeeCode;
+        private string strMonthValue;
 
         public LogInformation()
         {
@@ -24,74 +24,122 @@ namespace EmployeeInformation
 
         private void LogInformation_Load(object sender, EventArgs e)
         {
-            curDate = DateTime.Now;
-            //MessageBox.Show(curDate.Day.ToString());
-            //this.GenerateData();
+            GenerateMonths();
+            RefreshTable();
         }
-        private void GenerateData()
+        private void RefreshTable()
         {
-            //1st cutoff 6 - 20
-            string query1 = "Select left(logdate,10) as Logdate,EmployeeCode,right(timein,8) as Timein," +
-                "right(timeout,8) as Timeout from logtime " +
-                "where left(logdate, 10) between '";
-                if(curDate.Day>=6 && curDate.Day<=20)
-                        {
-                query1 = query1 + curDate.Year + "-" + curDate.Month + "-6";
-                        }
-                query1 = query1 + "' and '"+ curDate.Year + "-" + curDate.Month + "-20" + "'" ;
-
-
-            //2nd cutoff 21 - 5
-            string query2 = "Select left(logdate,10) as Logdate,EmployeeCode,right(timein,8) as Timein," +
-            "right(timeout,8) as Timeout from logtime " +
-            "where left(logdate, 10) between '";
-            if (curDate.Day >= 5 && curDate.Day <= 21)
+            string Year = DateTime.Now.ToString("yyyy");
+            foreach (DataRow row in monthsdata.Rows)
             {
-                query2 = query2 + curDate.Year + "-" + (curDate.Month-1) + "-21";
+                if (cmbMonths.Text == row["Month"].ToString())
+                {
+                    strMonthValue = row["Value"].ToString();
+                }
             }
-            query2 = query2 + "' and '" + curDate.Year + "-" + curDate.Month + "-5" + "'";
 
-            //DataTable dtable1 = Config.RetreiveData(query1);
-            DataTable dtable2 = Config.RetreiveData(query2);
-            try
+            string query = "SELECT DATE_FORMAT(LogDate, '%Y-%m-%d') AS LogDate,DATE_FORMAT(StartTime, '%T') AS TimeIN,DATE_FORMAT(EndTime, '%T') AS TimeOut FROM logtime lt " +
+                            "WHERE lt.EmployeeCode = '" + EmployeeCode + "' " +
+                            "AND Date(lt.LogDate) BETWEEN  '"+ Year + "-"+ strMonthValue + "-01' AND '"+ Year + "-"+ strMonthValue + "-31' ";
+
+            DataTable data = new DataTable();
+            data = Config.RetreiveData(query);
+
+            dataGridView1.Rows.Clear();
+            dataGridView1.AllowUserToAddRows = true;
+            for (int x = 0; x < data.Rows.Count; x++)
             {
-                //if (curDate.Day >= 6 && curDate.Day <= 20)
-                //{
-                //    dataGridView1.Rows.Clear();
-                //    dataGridView1.AllowUserToAddRows = true;
-                //    for (int x = 0; x < dtable1.Rows.Count; x++)
-                //    {
-                //        DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[x].Clone();
-                //        row.Cells[0].Value = dtable1.Rows[x]["LogDate"].ToString();
-                //        row.Cells[1].Value = dtable1.Rows[x]["EmployeeCode"].ToString();
-                //        row.Cells[2].Value = dtable1.Rows[x]["TimeIn"].ToString();
-                //        row.Cells[3].Value = dtable1.Rows[x]["TimeOut"].ToString();
-
-                //        dataGridView1.Rows.Add(row);
-                //    }
-                //    dataGridView1.AllowUserToAddRows = false;
-                //}
-                //else
-                //{
-                    dataGridView2.Rows.Clear();
-                    dataGridView2.AllowUserToAddRows = true;
-                    for (int x = 0; x < dtable2.Rows.Count; x++)
-                    {
-                        DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[x].Clone();
-                        row.Cells[0].Value = dtable2.Rows[x]["LogDate"].ToString();
-                        row.Cells[1].Value = dtable2.Rows[x]["EmployeeCode"].ToString();
-                        row.Cells[2].Value = dtable2.Rows[x]["TimeIn"].ToString();
-                        row.Cells[3].Value = dtable2.Rows[x]["TimeOut"].ToString();
-
-                        dataGridView2.Rows.Add(row);
-                    }
-                    dataGridView2.AllowUserToAddRows = false;
-                //}
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[x].Clone();
+                row.Cells[0].Value = data.Rows[x]["LogDate"].ToString();
+                row.Cells[1].Value = data.Rows[x]["TimeIn"].ToString();
+                row.Cells[2].Value = data.Rows[x]["TimeOut"].ToString();
+                dataGridView1.Rows.Add(row);
             }
-            catch (Exception exc)
+            dataGridView1.AllowUserToAddRows = false;
+
+
+        }
+        private void GenerateMonths()
+        {
+            monthsdata.Columns.Add(new DataColumn("Month"));
+            monthsdata.Columns.Add(new DataColumn("Value"));
+
+            var drow1 = monthsdata.NewRow();
+            drow1["Month"] = "January";
+            drow1["Value"] = "01";
+            monthsdata.Rows.Add(drow1);
+
+            var drow2 = monthsdata.NewRow();
+            drow2["Month"] = "February";
+            drow2["Value"] = "02";
+            monthsdata.Rows.Add(drow2);
+
+            var drow3 = monthsdata.NewRow();
+            drow3["Month"] = "March";
+            drow3["Value"] = "03";
+            monthsdata.Rows.Add(drow3);
+
+            var drow4 = monthsdata.NewRow();
+            drow4["Month"] = "April";
+            drow4["Value"] = "04";
+            monthsdata.Rows.Add(drow4);
+
+            var drow5 = monthsdata.NewRow();
+            drow5["Month"] = "May";
+            drow5["Value"] = "05";
+            monthsdata.Rows.Add(drow5);
+
+            var drow6 = monthsdata.NewRow();
+            drow6["Month"] = "June";
+            drow6["Value"] = "06";
+            monthsdata.Rows.Add(drow6);
+
+            var drow7 = monthsdata.NewRow();
+            drow7["Month"] = "July";
+            drow7["Value"] = "07";
+            monthsdata.Rows.Add(drow7);
+
+            var drow8 = monthsdata.NewRow();
+            drow8["Month"] = "August";
+            drow8["Value"] = "08";
+            monthsdata.Rows.Add(drow8);
+
+            var drow9 = monthsdata.NewRow();
+            drow9["Month"] = "September";
+            drow9["Value"] = "09";
+            monthsdata.Rows.Add(drow9);
+
+            var drow10 = monthsdata.NewRow();
+            drow10["Month"] = "October";
+            drow10["Value"] = "10";
+            monthsdata.Rows.Add(drow10);
+
+            var drow11 = monthsdata.NewRow();
+            drow11["Month"] = "November";
+            drow11["Value"] = "11";
+            monthsdata.Rows.Add(drow11);
+
+            var drow12 = monthsdata.NewRow();
+            drow12["Month"] = "December";
+            drow12["Value"] = "12";
+            monthsdata.Rows.Add(drow12);
+
+            foreach (DataRow row in monthsdata.Rows)
             {
-                MessageBox.Show(exc.ToString());
+                cmbMonths.Items.Add(row[0]);
             }
+        }
+
+        private void cmbMonths_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (DataRow row in monthsdata.Rows)
+            {
+                if (cmbMonths.Text == row["Month"].ToString())
+                {
+                    strMonthValue = row["Value"].ToString();
+                }
+            }
+            RefreshTable();
         }
     }
 }
